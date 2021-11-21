@@ -1,0 +1,28 @@
+diff --color -ur onnx-1.10.2/onnx/checker.cc onnx-1.10.2.modified/onnx/checker.cc
+--- onnx-1.10.2/onnx/checker.cc	2021-10-25 23:52:09.000000000 +0800
++++ onnx-1.10.2.modified/onnx/checker.cc	2021-11-21 17:00:18.382202200 +0800
+@@ -127,15 +127,15 @@
+         has_location = true;
+         std::string data_path = path_join(ctx.get_model_dir(), entry.value());
+         // use stat to check whether the file exists
+-        struct stat buffer;
+-        if (stat((data_path).c_str(), &buffer) != 0) {
+-          fail_check(
+-              "Data of TensorProto ( tensor name: ",
+-              tensor.name(),
+-              ") should be stored in ",
+-              data_path,
+-              ", but it doesn't exist or is not accessible.");
+-        }
++        // struct stat buffer;
++        // if (stat((data_path).c_str(), &buffer) != 0) {
++        //   fail_check(
++        //       "Data of TensorProto ( tensor name: ",
++        //       tensor.name(),
++        //       ") should be stored in ",
++        //       data_path,
++        //       ", but it doesn't exist or is not accessible.");
++        // }
+       }
+     }
+     if (!has_location) {
