@@ -17,9 +17,17 @@ jobs:
             base-devel
             dos2unix
             git
+            mingw-w64-x86_64-benchmark
+            mingw-w64-x86_64-boost
             mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-cxxopts
             mingw-w64-x86_64-eigen3
+            mingw-w64-x86_64-flatbuffers
+            mingw-w64-x86_64-gtest
+            mingw-w64-x86_64-nsync
             mingw-w64-x86_64-protobuf
+            mingw-w64-x86_64-re2
+            mingw-w64-x86_64-spdlog
             mingw-w64-x86_64-toolchain
       - name: CI-Build
         run: |
