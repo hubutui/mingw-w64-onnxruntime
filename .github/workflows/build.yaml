@@ -18,6 +18,8 @@ jobs:
             dos2unix
             git
             mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-eigen3
+            mingw-w64-x86_64-protobuf
             mingw-w64-x86_64-toolchain
       - name: CI-Build
         run: |
