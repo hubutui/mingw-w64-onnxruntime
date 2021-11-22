@@ -17,10 +17,8 @@ pacman -U --noconfirm \
   mingw-w64-x86_64-onnx-1.10.2-1-any.pkg.tar.zst
 git clone https://github.com/microsoft/onnxruntime.git
 cd onnxruntime
+sed -i "s,boost_mp11,Boost," "cmake/CMakeLists.txt"
 git submodule update --init --recursive
-# pushd cmake/external/onnx
-# patch -p1 -i ../../../../0001.fix-building.patch
-# popd
 cmake \
   -B build-shared \
   -DCMAKE_BUILD_TYPE=Release \
