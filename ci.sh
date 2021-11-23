@@ -45,4 +45,4 @@ cmake \
   -Donnxruntime_USE_PREINSTALLED_EIGEN=ON \
   -G'MSYS Makefiles' \
   -S cmake
-cmake --build build-shared
+mingw32-make -C build-shared VERBOSE=1
