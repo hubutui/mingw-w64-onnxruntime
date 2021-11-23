@@ -24,6 +24,7 @@ cmake \
   -B build-shared \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_INSTALL_PREFIX=/mingw64 \
+  -DProtobuf_USE_STATIC_LIBS=ON \
   -Deigen_SOURCE_PATH=/mingw64/include/eigen3 \
   -Donnxruntime_BUILD_BENCHMARKS=OFF \
   -Donnxruntime_BUILD_SHARED_LIB=ON \
