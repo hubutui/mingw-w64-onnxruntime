@@ -38,6 +38,8 @@ cmake \
   -Donnxruntime_USE_AVX2=ON \
   -Donnxruntime_USE_AVX512=ON \
   -Donnxruntime_USE_AVX=ON \
+  -DCMAKE_C_FLAGS="/GL /MP /Zi /arch:AVX2" \
+  -DCMAKE_CXX_FLAGS="/EHsc /GL /MP /Zi /arch:AVX2" \
   -Donnxruntime_USE_CUDA=OFF \
   -Donnxruntime_USE_DNNL=OFF \
   -Donnxruntime_USE_FULL_PROTOBUF=ON \
